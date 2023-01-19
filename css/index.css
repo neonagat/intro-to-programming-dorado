@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: azure;
+  color: rgb(26, 35, 75);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(27, 35, 148);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: rgb(27, 35, 148);
+  font-size: x-large;
+  font-weight: 600;
+}
+
+section {
+  padding-top: 5px;
+  padding-left: 14px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#experience {
+  background-color: hsl(210, 78%, 75%);
+  padding: 5px;
+  margin-top: 15px;
+}
+
+#experience p {
+  background-color: hsl(211, 59%, 90%);
+  color: hsl(240, 100%, 27%);
+  padding: 5px;
+}
+
+#skills {
+  background-color: hsl(210, 78%, 75%);
+  padding: 5px;
+  margin-top: 15px;
+}
+
+#skills ul {
+  background-color: hsl(211, 59%, 90%);
+  color: darkblue;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: hsl(240, 100%, 27%);
+  border-radius: 10px;
+  color: hsl(211, 59%, 90%);
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+form label {
+  font-size: large;
+  color: hsl(240, 100%, 27%);
+}
+
+form textarea {
+  font-size: large;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form input {
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#messages {
+  background-color: hsl(210, 78%, 75%);
+  padding: 5px;
+}
+
+#messages ul {
+  background-color: hsl(211, 59%, 90%);
+  color: darkblue;
+  padding: 5px;
+}
+
+footer {
+  background-color: hsl(240, 100%, 27%);
+  color: hsl(211, 59%, 90%);
+  text-align: center;
+  font-size: large;
+  margin-top: 5px;
+  padding: 10px;
+}
