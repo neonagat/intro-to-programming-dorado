@@ -7,22 +7,24 @@ body {
   background-color: azure;
   color: rgb(26, 35, 75);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 10px;
 }
 
-h1 {
-  text-align: center;
-  color: rgb(27, 35, 148);
-  font-weight: 600;
-  margin-bottom: 20px;
+.nav {
+  background-color: hsl(211, 59%, 90%);
+  color: hsl(240, 100%, 27%);
+  font-size: large;
+  padding: 10px 15px;
 }
 
+p {
+  margin: 10px;
+}
+
+h1,
 h2 {
   color: rgb(27, 35, 148);
-  font-size: x-large;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 section {
@@ -34,32 +36,42 @@ ul li {
   list-style-type: none;
 }
 
-#experience {
-  background-color: hsl(210, 78%, 75%);
-  padding: 5px;
-  margin-top: 15px;
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 1.125rem;
+}
+
+.menu__item--large {
+  font-size: 1.25rem;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 1rem;
 }
 
 #experience p {
   background-color: hsl(211, 59%, 90%);
   color: hsl(240, 100%, 27%);
-  padding: 5px;
-}
-
-#skills {
-  background-color: hsl(210, 78%, 75%);
-  padding: 5px;
-  margin-top: 15px;
 }
 
 #skills ul {
-  background-color: hsl(211, 59%, 90%);
   color: darkblue;
-  padding: 5px;
+}
+
+#messages ul {
+  color: darkblue;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  color: black;
 }
 
 button {
@@ -70,6 +82,14 @@ button {
   height: 30px;
   margin-bottom: 10px;
   font-size: large;
+}
+
+button:hover {
+  background-color: black;
+}
+
+button:active {
+  background-color: rgb(41, 41, 41);
 }
 
 form label {
@@ -89,22 +109,63 @@ form input {
   margin-bottom: 15px;
 }
 
-#messages {
-  background-color: hsl(210, 78%, 75%);
-  padding: 5px;
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
 }
 
-#messages ul {
-  background-color: hsl(211, 59%, 90%);
-  color: darkblue;
-  padding: 5px;
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.field--inline {
+  display: inline-block;
+}
+
+.field__label,
+.field__input {
+  display: block;
+}
+
+.field__label {
+  font-weight: 600;
+  margin-bottom: 3px;
 }
 
 footer {
-  background-color: hsl(240, 100%, 27%);
-  color: hsl(211, 59%, 90%);
+  background-color: hsl(211, 59%, 90%);
+  color: hsl(240, 100%, 27%);
   text-align: center;
   font-size: large;
-  margin-top: 5px;
-  padding: 10px;
+  padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .field {
+    width: 32rem;
+  }
+
+  .field--inline {
+    width: 16rem;
+  }
 }
