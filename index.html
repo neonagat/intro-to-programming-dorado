@@ -13,62 +13,141 @@
     />
     <link rel="stylesheet" href="css/index.css" />
   </head>
+
   <body>
-    <h1>Hi I'm a Frontend Web developer</h1>
-    <section>
-      <h2>About</h2>
-      <p>
-        Fascinated by technology and eager to learn new programming concepts
-        that hone my skills as an engineer and make my projects skyrocket.
-      </p>
-    </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>
-        Frontend Web Developer | Colgate Enterprise Corp | New York, NY 01/2022
-        – Present
-      </p>
-      <p>
-        HTML Email Developer | Colgate Enterprise Corp | New York, NY 10/2019 -
-        12/2021
-      </p>
-      <p>QA Engineer | Axecon Corp | New York, NY 10/2018 - 09/2019</p>
-      <p>QA Analyst | Lexunder inc | New York, NY 12/2016 - 09/2018</p>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul></ul>
-    </section>
-    <section>
-      <h2>Connect</h2>
-      <p>tarasovskiy.s@gmail.com</p>
-      <p>
-        <a href="https://github.com/neonagat" target="_blank"
-          >https://github.com/neonagat</a
-        >
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/sergtaras/" target="_blank"
-          >https://www.linkedin.com/in/sergtaras/</a
-        >
-      </p>
-    </section>
-    <section>
-      <h2>Leave a Message</h2>
-      <form name="leave_message">
-        <label>Name</label><br />
-        <input type="text" name="name" required="true" /><br />
-        <label>Email Address</label><br />
-        <input type="email" name="email" required="true" /><br />
-        <label>Message</label><br />
-        <textarea name="message" required="true"></textarea><br />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <section id="messages">
-      <h2>Messages</h2>
-      <ul></ul>
-    </section>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <ul class="menu" role="list">
+            <li class="menu__item"></li>
+          </ul>
+
+          <ul class="menu menu--hide-mobile" role="list">
+            <li class="menu__item">
+              <a class="link link--no-color" href="#about">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="#experience">Experience</a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="#skills">Skills</a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="#connect">Connect</a>
+            </li>
+            <li class="menu__item">
+              <a class="link link--no-color" href="#leave_message"
+                >Leave a Message</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            Hi I'm a Frontend Web developer. Fascinated by technology and eager
+            to learn new programming concepts that hone my skills as an engineer
+            and make my projects skyrocket.
+          </p>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <ul role="list">
+            <li class="card">
+              <p>
+                Frontend Web Developer | Colgate Enterprise Corp | New York, NY
+                01/2022 – Present
+              </p>
+            </li>
+            <li class="card">
+              <p>
+                HTML Email Developer | Colgate Enterprise Corp | New York, NY
+                10/2019 - 12/2021
+              </p>
+            </li>
+            <li class="card">
+              <p>QA Engineer | Axecon Corp | New York, NY 10/2018 - 09/2019</p>
+            </li>
+            <li class="card">
+              <p>QA Analyst | Lexunder inc | New York, NY 12/2016 - 09/2018</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul role="list"></ul>
+        </section>
+
+        <section id="connect">
+          <h2>Connect</h2>
+          <p>tarasovskiy.s@gmail.com</p>
+          <p>
+            <a href="https://github.com/neonagat" target="_blank"
+              >https://github.com/neonagat</a
+            >
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/sergtaras/" target="_blank"
+              >https://www.linkedin.com/in/sergtaras/</a
+            >
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Leave a Message</h2>
+
+          <form name="leave_message">
+            <div class="field field--inline">
+              <label class="field__label" for="lm_name">Name</label>
+              <input
+                class="field__input"
+                id="lm_name"
+                type="text"
+                name="name"
+                required
+              />
+            </div>
+
+            <div class="field field--inline">
+              <label class="field__label" for="lm_email">Email Address</label>
+              <input
+                class="field__input"
+                id="lm_email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="lm_message">Message</label>
+              <textarea
+                class="field__input"
+                id="lm_message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <button class="button" type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section id="messages">
+          <h2>Messages</h2>
+          <ul></ul>
+        </section>
+      </div>
+    </main>
+
     <footer></footer>
     <script src="js/index.js"></script>
   </body>
