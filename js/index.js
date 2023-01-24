@@ -45,3 +45,25 @@ messageForm.addEventListener("submit", (e) => {
 
   messageForm.reset();
 });
+
+function renderProjects() {
+  const githubRequest = new XMLHttpRequest();
+
+  githubRequest.open("GET", "https://api.github.com/users/neonagat/repos");
+
+  githubRequest.addEventListener("load", function () {
+    const parsedData = JSON.parse(this.response);
+
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let repo of parsedData) {
+      const project = document.createElement("li");
+      project.innerHTML = `${repo.name}`;
+      projectList.appendChild(project);
+    }
+  });
+  githubRequest.send();
+}
+
+renderProjects();
