@@ -46,24 +46,41 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 });
 
-function renderProjects() {
-  const githubRequest = new XMLHttpRequest();
+// function renderProjects() {
+//   const githubRequest = new XMLHttpRequest();
 
-  githubRequest.open("GET", "https://api.github.com/users/neonagat/repos");
+//   githubRequest.open("GET", "https://api.github.com/users/neonagat/repos");
 
-  githubRequest.addEventListener("load", function () {
-    const parsedData = JSON.parse(this.response);
+//   githubRequest.addEventListener("load", function () {
+//     const parsedData = JSON.parse(this.response);
 
-    const projectSection = document.getElementById("projects");
-    const projectList = projectSection.querySelector("ul");
+//     const projectSection = document.getElementById("projects");
+//     const projectList = projectSection.querySelector("ul");
 
-    for (let repo of parsedData) {
-      const project = document.createElement("li");
-      project.innerHTML = `${repo.name}`;
-      projectList.appendChild(project);
-    }
-  });
-  githubRequest.send();
+//     for (let repo of parsedData) {
+//       const project = document.createElement("li");
+//       project.innerHTML = `${repo.name}`;
+//       projectList.appendChild(project);
+//     }
+//   });
+//   githubRequest.send();
+// }
+
+// renderProjects();
+
+function renderProjects2() {
+  fetch("https://api.github.com/users/neonagat/repos")
+    .then((res) => res.json())
+    .then((data) => {
+      const projectSection = document.getElementById("projects");
+      const projectList = projectSection.querySelector("ul");
+
+      for (let repo of data) {
+        const project = document.createElement("li");
+        project.innerHTML = `${repo.name}`;
+        projectList.appendChild(project);
+      }
+    });
 }
 
-renderProjects();
+renderProjects2();
